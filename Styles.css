@@ -1,0 +1,30 @@
+/* External CSS file */
+.sidebar {
+    background-color: #f2f2f2;
+}
+
+.deals {
+    background-color: #fff8dc;
+    color: darkgreen;
+    font-weight: bold;
+}
+
+.news {
+    background-color: #e6f7ff;
+    font-style: italic;
+}
+
+.ad {
+    background-color: #e3a0a0;
+    text-align: center;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+}
+
+.footer a {
+    color: lightblue;
+    margin: 0 5px;
+}

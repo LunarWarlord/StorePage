@@ -3,12 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Storefront Layout</title>
+    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <style>
+        body {
+            font-family: 'Avenir', Helvetica, Arial, sans-serif;
+            background-color: #9f9f9f;
+        }
+        h1 {
+            color: #2c3e50;
+            margin: 0;
+        }
+        h3 {
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            vertical-align: top;
+            padding: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #2c3e50;
+        }
+        a:hover {
+            color: #007bff;
+        }
+    </style>
 </head>
 <body>
 
 <table border="1" width="100%" cellspacing="0" cellpadding="10">
     <!-- Banner -->
-    <tr>
+    <tr style="background-color: #859cb6;">
         <td width="40" align="left">
         <img src="Icon.png" alt="Store Icon" width="40" height="100">
         </td>
@@ -19,7 +48,7 @@
 
     <!-- Main Content + Aside Row -->
     <tr valign="top">
-        <td width="20%">
+        <td width="20%" class="sidebar">
             <h3>Navigation</h3>
             <p><a href="">Home</a></p>
             <p><a href="">About Us</a></p>
@@ -28,14 +57,14 @@
             <p><a href="">Login</a></p>
             <p><a href="">Contact Us</a></p>
         </td>
-        <td width="30%">
+        <td width="30%" class="deals">
             <h3>HOT DEALS!</h3>
             <p>Placeholder 1</p>
             <p>Placeholder 2</p>
             <p>Placeholder 3</p>
             <p>Placeholder 4</p>
         </td>
-        <td width="30%">
+        <td width="30%" class="news">
             <h3>LATEST NEWS</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.
                 Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.
@@ -43,7 +72,7 @@
                 Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.
                 Ad litora torquent per conubia nostra inceptos himenaeos.</p>
         </td>
-        <td width="20%">
+        <td width="20%" class="ad">
             <h2>Your Ad Here!</h2>
             <img src="Ad.png" alt="Ad" width="300" height="200">
         </td>
@@ -51,7 +80,7 @@
 
     <!-- Footer Row -->
     <tr>
-        <td colspan="4" align="center">
+        <td colspan="4" align="center" class="footer">
             <a href="">Terms of Use</a> | <a href="">Privacy Policy</a> | <a href="">Cookie Policy</a> | <a href="">Copyright</a>
             <p>Alex Hammond</p>
         </td>
