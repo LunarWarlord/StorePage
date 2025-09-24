@@ -28,3 +28,10 @@
     color: lightblue;
     margin: 0 5px;
 }
+.banner-title {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif !important;
+    font-size: 2.5rem !important;
+    font-weight: bold !important;
+    color: #2c3e50 !important;
+    margin: 0 !important;
+}
