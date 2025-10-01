@@ -67,7 +67,7 @@
         <td colspan="3">
             <div class="form-container">
                 <h3 class="mb-4">Create an Account</h3>
-                <form>
+                <form id="signup">
                     <div class="mb-3">
                         <label for="username" class="form-label">Username</label>
                         <input type="text" class="form-control" id="username" placeholder="Enter username">
@@ -84,7 +84,7 @@
                         <label for="confirmPassword" class="form-label">Confirm Password</label>
                         <input type="password" class="form-control" id="confirmPassword" placeholder="Re-enter password">
                     </div>
-                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                    <button type="button" id="signupbtn" class="btn btn-primary" onclick="validateText()">Sign Up</button>
                 </form>
             </div>
         </td>
@@ -99,7 +99,40 @@
         </td>
     </tr>
 </table>
+<script>
+    function validateText() {
+        const fields = ["username", "email", "password", "confirmPassword"];
+        let Valid = true;
 
+        fields.forEach(id => {
+            const input = document.getElementById(id);
+            if (input.value.trim() === "") {
+                input.placeholder = "Field is required";
+                input.style.border = "2px solid red";
+                Valid = false;
+            } else {
+                input.style.border = "";
+            }
+        });
+        const password = document.getElementById("password");
+        const confirmPassword = document.getElementById("confirmPassword");
+
+        if (password.value !== confirmPassword.value) {
+            confirmPassword.value = "";
+            confirmPassword.placeholder = "Passwords do not match";
+            confirmPassword.style.border = "2px solid red";
+            Valid = false;
+        }
+        const signup = document.getElementById("signupbtn");
+        if (Valid) {
+            signup.textContent = "Sign Up Successful!";
+            signup.disabled = true;
+            setTimeout(() => {
+                document.getElementById("signup").submit();
+            }, 1000);
+        }
+    }
+</script>
 
 </body>
 </html>
